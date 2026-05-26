@@ -472,3 +472,165 @@ a {
 }
 
 /* ================================================ */
+
+/* PANTALLAS min 503px */
+@media screen and (min-width: 503px) {
+  /* NAVEGADOR */
+  .nav_pill {
+    padding: 1.625rem 1.125rem; /* 26px 18px */
+    max-height: 3.5rem; /* 56px */
+  }
+
+  .nav_pill a {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.375rem; /* 22px */
+  }
+
+  .searching_bar_container {
+    width: 100%;
+    height: 3.5rem;
+  }
+
+  .searching_bar {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+  }
+
+  .searching_bar::placeholder {
+    color: var(--blue);
+  }
+}
+
+/* ================================================ */
+
+/* PANTALLAS min 766px */
+@media screen and (min-width: 766px) {
+  /* LOGO ANIMACIÓN */
+  .logo {
+    width: 12rem;
+  }
+
+  .dot {
+    width: 11px;
+    height: 11px;
+  }
+
+  /* DOTS PUNTO DE PARTIDA */
+  /* blue */
+  .dot.blue {
+    bottom: 20px;
+    left: -1px;
+  }
+
+  /* olive */
+  .dot.olive {
+    bottom: 35px;
+    left: 82px;
+  }
+
+  /* rose */
+  .dot.rose {
+    bottom: 22px;
+    left: 184px;
+  }
+
+  /* DOTS SALTANDO */
+  /* blue */
+  @keyframes dot-animate-blue {
+    5% {
+      width: 11px;
+      height: 11px;
+    }
+
+    20% {
+      height: 13px;
+    }
+
+    30% {
+      width: 10px;
+      height: 13px;
+    }
+
+    50% {
+      width: 12px;
+      height: 8px;
+      transform: translateY(12px);
+    }
+
+    75% {
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  /* olive */
+  @keyframes dot-animate-olive {
+    5% {
+      width: 11px;
+      height: 11px;
+    }
+
+    20% {
+      height: 13px;
+    }
+
+    30% {
+      width: 10px;
+      height: 13px;
+    }
+
+    50% {
+      width: 12px;
+      height: 8px;
+      transform: translateY(27px);
+    }
+
+    75% {
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  /* rose */
+  @keyframes dot-animate-rose {
+    5% {
+      width: 11px;
+      height: 11px;
+    }
+
+    20% {
+      height: 13px;
+    }
+
+    30% {
+      width: 10px;
+      height: 13px;
+    }
+
+    50% {
+      width: 12px;
+      height: 8px;
+      transform: translateY(14px);
+    }
+
+    75% {
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  /* PRIMARY BUTTON enlace con apariencia de botón */
+  .btn_primary {
+    width: 12.5rem; /* 200px */
+    height: 3.5rem; /* 56px */
+  }
+
+  /* BUTTON ICON */
+  .btn_login,
+  .btn_shop,
+  .btn_heart {
+    width: 3rem; /* 48px */
+    height: 3rem; /* 48px */
+  }
+}
