@@ -1,0 +1,474 @@
+/* ESTILOS COMUNES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+
+  /* COLORES */
+  --white: #ffffff;
+  --blue: #5383c6;
+  --sand: #fde9c8;
+  --rose: #f4b6ae;
+  --olive: #998513;
+  --chocolate: #342620;
+  --black: #000000;
+
+  /* TIPOGRAFÍAS */
+  --font-title: "Playfair Display", serif;
+  --font-body: "Nunito Sans", Arial, sans-serif;
+  --font-normal: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* BORDER RADIUS */
+  --border-radius-rounded: 50vh;
+
+  /* ANIMACIONES */
+  --animation-dot-show: dot-show 0.2s ease forwards 1s;
+}
+
+body {
+  min-width: 320px;
+  padding-inline: clamp(1rem, 3vw, 4rem); /*padding laterales */
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================================================ */
+
+/* COLORES */
+.blue {
+  background-color: var(--blue);
+}
+
+.olive {
+  background-color: var(--olive);
+}
+
+.rose {
+  background-color: var(--rose);
+}
+
+/* TIPOGRAFÍAS */
+h1,
+.hero_title {
+  font-family: var(--font-title);
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.625rem; /* 42px  */
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: 1.75rem; /* 28px */
+  line-height: 2.35rem; /* 36px  */
+  font-weight: var(--font-bold);
+}
+
+h3 {
+  font-family: var(--font-body);
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.5rem; /* 24px  */
+  font-weight: var(--font-bold);
+}
+
+p,
+li {
+  font-family: var(--font-body);
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px  */
+  font-weight: var(--font-normal);
+}
+
+a {
+  font-family: var(--font-body);
+}
+
+/* UNDERLINED */
+.underlined {
+  text-decoration: underline;
+  font-family: var(--font-body);
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.5rem; /* 24px  */
+  font-weight: var(--font-bold);
+  display: block;
+}
+
+/* LOGO */
+.logo {
+  width: 11rem;
+  height: auto;
+
+  position: relative;
+  margin-block: 1rem;
+}
+
+/* LOGO ANIMACIÓN */
+/* MOBILE-FIRST */
+/* ENTRADA LOGO */
+.logo img {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+
+  transform: translateX(-12rem);
+  animation: logo-slide 1s ease forwards;
+}
+
+@keyframes logo-slide {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* DOTS */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--border-radius-rounded);
+  position: absolute;
+
+  opacity: 0;
+}
+
+/* blue */
+.dot.blue {
+  bottom: 17px;
+  left: 0px;
+
+  animation:
+    var(--animation-dot-show),
+    /* aparece con retraso y se queda */ dot-animate-blue 1.1s infinite 1.2s; /* aparece con retraso y se repite en bucle */
+}
+
+/* olive */
+.dot.olive {
+  background-color: var(--olive);
+
+  bottom: 32px;
+  left: 75px;
+
+  animation:
+    var(--animation-dot-show),
+    /* aparece con retraso y se queda */ dot-animate-olive 1.2s infinite 1.2s; /* aparece con retraso y se repite en bucle */
+}
+
+/* rose */
+.dot.rose {
+  background-color: var(--rose);
+
+  bottom: 19px;
+  left: 167px;
+
+  animation:
+    var(--animation-dot-show),
+    /* aparece con retraso y se queda */ dot-animate-rose 1.3s infinite 1.2s; /* aparece con retraso y se repite en bucle */
+}
+
+/* APARICIÓN DOTS */
+@keyframes dot-show {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* DOTS SALTANDO */
+/* blue */
+@keyframes dot-animate-blue {
+  5% {
+    width: 10px;
+    height: 10px;
+  }
+
+  20% {
+    height: 12px;
+  }
+
+  30% {
+    width: 8px;
+    height: 12px;
+  }
+
+  50% {
+    width: 11px;
+    height: 6px;
+    transform: translateY(9px);
+  }
+
+  75% {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* olive */
+@keyframes dot-animate-olive {
+  5% {
+    width: 10px;
+    height: 10px;
+  }
+
+  20% {
+    height: 12px;
+  }
+
+  30% {
+    width: 8px;
+    height: 12px;
+  }
+
+  50% {
+    width: 11px;
+    height: 6px;
+    transform: translateY(24px);
+  }
+
+  75% {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* rose */
+@keyframes dot-animate-rose {
+  5% {
+    width: 10px;
+    height: 10px;
+  }
+
+  20% {
+    height: 12px;
+  }
+
+  30% {
+    width: 8px;
+    height: 12px;
+  }
+
+  50% {
+    width: 11px;
+    height: 6px;
+    transform: translateY(11px);
+  }
+
+  75% {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* HEADER TOP */
+.header_top {
+  padding-block: 1rem; /* 16px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* 16px */
+}
+
+.btns_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* NAVEGADOR */
+/* MOBILE-FIRST */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav_list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+/* NAV PILLS */
+.nav_pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sand);
+  border-radius: var(--border-radius-rounded);
+  width: auto;
+  padding: 1.125rem 2rem; /* 18px 16px */
+  max-height: 2.5rem;
+  white-space: nowrap;
+}
+
+.nav_pill a {
+  font-family: var(--font-body);
+  font-size: 1rem; /* 16px*/
+  line-height: 1.5rem; /* 24px */
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* nav_pill HOVER */
+.nav_pill:hover {
+  background-color: var(--rose);
+  border: 1px solid var(--black);
+  transition-duration: 200ms;
+}
+
+/* nav_pill ACTIVE */
+.nav_pill.active {
+  background-color: var(--chocolate);
+  border: none;
+}
+
+.nav_pill.active a {
+  color: var(--white);
+}
+
+/* ================================================ */
+
+/* PRIMARY BUTTON enlace con apariencia de botón */
+/* MOBILE FIRST */
+.btn_primary {
+  background-color: var(--blue);
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-family: var(--font-body);
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px  */
+  font-weight: var(--font-normal);
+
+  display: flex;
+  height: 3rem; /* 48px */
+  min-width: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-rounded);
+  padding: 1rem 2rem;
+  align-self: stretch;
+}
+
+.btn_primary:hover {
+  background-color: var(--rose);
+  color: var(--black);
+  border: 1px solid var(--black);
+  transition-duration: 200ms;
+}
+
+.btn_primary:active {
+  background-color: var(--chocolate);
+  border: none;
+  color: var(--white);
+}
+
+/* BUTTON ICON */
+/* MOBILE-FIRST */
+.btn_icon {
+  width: 1.5rem; /* 24px */
+}
+
+.btn_login,
+.btn_shop,
+.btn_heart {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+
+  background-color: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: var(--border-radius-rounded);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_login:hover,
+.btn_shop:hover,
+.btn_heart:hover {
+  background-color: var(--rose);
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.btn_login:active,
+.btn_shop:active,
+.btn_heart:active {
+  background-color: var(--chocolate);
+}
+
+/* BUSCADOR */
+/* FORM */
+.searching_bar_container {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searching_bar::placeholder {
+  color: transparent;
+}
+
+.searching_bar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: var(--border-radius-rounded);
+  position: relative;
+
+  font-family: var(--font-body);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.375rem; /* 22px */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searching_bar_container button {
+  position: absolute;
+  left: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* BORDE SUPERIOR DECORATIVO */
+.dotted_border_blue {
+  border-top: 0.5rem dotted var(--blue);
+}
+
+.dotted_border_olive {
+  border-top: 0.5rem dotted var(--olive);
+}
+
+.dotted_border_rose {
+  border-top: 0.5rem dotted var(--rose);
+}
+
+/* ================================================ */
