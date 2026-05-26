@@ -14,6 +14,88 @@
   </head>
 
   <body>
-    
+    <!-- HEADER -->
+    <header class="header">
+      <!-- PARTE SUPERIOR DEL HEADER -->
+      <div class="header_top">
+        <!-- Logo -->
+        <!-- en la home el logo es h1 -->
+        <!-- en las otras páginas el logo será p o div -->
+        <h1 class="logo">
+          <a href="#">
+            <img
+              src="http://a517.masterux.net/imagenes/logo-pura-tinta.svg"
+              alt="Pura Tinta"
+            />
+          </a>
+          <div class="dot blue"></div>
+          <div class="dot olive"></div>
+          <div class="dot rose"></div>
+        </h1>
+
+        <!-- Contenedor de botones LOGIN y CARRITO -->
+        <div class="btns_container">
+          <button class="btn_login">
+            <img
+              class="btn_icon"
+              src="https://i.postimg.cc/HxgsJQ8G/icon-button-login.png"
+              alt="icono de inicio de sesión"
+            />
+          </button>
+
+          <button class="btn_shop">
+            <img
+              class="btn_icon"
+              src="https://i.postimg.cc/Y9RkhTw6/icon-button-shop.png"
+              alt="icono del carrito"
+            />
+          </button>
+        </div>
+      </div>
+
+      <!-- NAVEGADOR -->
+      <nav class="nav dotted_border_blue">
+        <!-- pills -->
+        <ul class="nav_list">
+          <li class="nav_pill">
+            <a href="#">Láminas</a>
+          </li>
+
+          <li class="nav_pill">
+            <a href="#">Cuadros</a>
+          </li>
+
+          <li class="nav_pill">
+            <a href="#">Fotografías</a>
+          </li>
+
+          <li class="nav_pill">
+            <a href="#">Pósters</a>
+          </li>
+
+          <li class="nav_pill">
+            <a href="#">Sobre nosotras</a>
+          </li>
+
+          <!-- barra de búsqueda -->
+          <li>
+            <form class="searching_bar_container">
+              <input
+                class="searching_bar"
+                type="search"
+                placeholder="Buscar..."
+              />
+              <button type="submit">
+                <img
+                  class="btn_icon searching_icon"
+                  src="https://i.postimg.cc/g06HcP81/icon-Magnifying-Glass.png"
+                  alt="icono de lente de búsqueda"
+                />
+              </button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
