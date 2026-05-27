@@ -103,7 +103,7 @@ a {
 
 /* LOGO */
 .logo {
-  width: 11rem;
+  width: 176px;
   height: auto;
 
   position: relative;
@@ -118,7 +118,7 @@ a {
   height: auto;
   opacity: 0;
 
-  transform: translateX(-12rem);
+  transform: translateX(-192px);
   animation: logo-slide 1s ease forwards;
 }
 
@@ -288,7 +288,6 @@ a {
 }
 
 /* NAVEGADOR */
-/* MOBILE-FIRST */
 .nav {
   display: flex;
   justify-content: center;
@@ -568,6 +567,43 @@ a {
   margin-block-start: auto;
 }
 
+/* BENEFICIOS DE ENVÍO */
+.delivery_section {
+  max-width: 72rem; /* 1152px */
+	margin-inline: auto;
+	padding-block: 2rem; /* 32px */
+}
+
+.delivery_cards_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  margin-block-start: 2rem;
+}
+
+.delivery_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem; /* 8px */
+}
+
+.delivery_card > p {
+  font-family: var(--font-body);
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px  */
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+}
+
+.delivery_card img {
+  width: 5.5rem; /*88px*/
+  object-fit: contain;
+}
+
+
 /* ================================================ */
 
 /* PANTALLAS min 503px */
@@ -605,7 +641,7 @@ a {
 @media screen and (min-width: 766px) {
   /* LOGO ANIMACIÓN */
   .logo {
-    width: 12rem;
+    width: 192px;
   }
 
   .dot {
@@ -756,7 +792,7 @@ a {
     gap: 2rem;
   }
 
-   /* COLLECTIONS SECTION */
+  /* COLLECTIONS SECTION */
   .collection_info > .btn_primary {
     align-self: center;
   }
