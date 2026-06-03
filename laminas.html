@@ -125,12 +125,12 @@
           <!-- imagen -->
           <div class="product_sheet_image">
             <img
-              src="https://i.postimg.cc/T34HYjrv/illustration-Eynon-Jones.png"
+              src="http://a517.masterux.net/imagenes/productos/lamina-summer-vibes-eynon-jones.png"
               alt="lámina Summer Vibes de  Eynon Jones de edición limitada"
             />
           </div>
 
-          <!-- información y CTA  -->
+          <!-- información + CTA  -->
           <section class="product_sheet_content">
             <!-- header -->
             <button class="btn_heart">
@@ -150,33 +150,42 @@
             </header>
 
             <!-- precio -->
-            <section class="product_sheet_price">
+            <div class="product_sheet_price">
               <p class="price">
                 110 € <span class="taxes">Impuestos incluidos</span>
               </p>
-            </section>
+            </div>
 
             <!-- medidas disponibles -->
-            <section class="product_sheet_size">
-              <p>Tamaño:</p>
-              <div class="btns_size_container">
-                <button class="btn_secondary">A4: 210 x 297mm</button>
+            <form class="product_sheet_size">
 
-                <button class="btn_secondary">A3: 297 x 420mm</button>
+              <fieldeset>
+                <legend>Tamaño:</legend>
+                
+                <div class="btns_size_container">
 
-                <button class="btn_secondary">A3: 500 x 700mm</button>
-              </div>
-            </section>
+                  <input id="size_a4" type="radio" name="size" >
+                  <label for="size_a4" class="btn_secondary"> A4: 210 x 297mm</label>
+
+                  <input id="size_a3" type="radio" name="size" >
+                  <label for="size_a3" class="btn_secondary"> A3: 297 x 420mm</label>
+
+                  <input id="size_a5" type="radio" name="size" >
+                  <label for="size_a5" class="btn_secondary"> A5: 148 x 210mm</label>
+
+                </div>
+              </fieldeset>
+            
+            </form>
 
             <!-- descripción -->
-            <section class="product_sheet_description">
-              <p>
+              <p class="product_sheet_description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
-            </section>
+            
 
             <!-- CTA -->
             <section class="cta_container">
@@ -200,7 +209,7 @@
             </section>
 
             <!-- añadir al carrito -->
-            <button class="btn_add_to_cart">
+            <button class="btn_add_to_cart" type="submit">
               Añadir al carrito
               <img
                 class="btn_icon"
@@ -228,8 +237,11 @@
               </button>
               <p>Compartir</p>
             </section>
+
           </section>
+
         </article>
+
       </section>
     </main>
   </body>
