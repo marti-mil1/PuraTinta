@@ -121,7 +121,7 @@
           </ul>
         </nav>
 
-        <article class="product_sheet_container">
+        <article class="product_sheet_container" id="product">
           <!-- imagen -->
           <div class="product_sheet_image">
             <img
@@ -131,7 +131,7 @@
           </div>
 
           <!-- información + CTA  -->
-          <section class="product_sheet_content">
+          <div class="product_sheet_content">
             <!-- header -->
             <button class="btn_heart">
               <img
@@ -158,37 +158,38 @@
 
             <!-- medidas disponibles -->
             <form class="product_sheet_size">
-
               <fieldeset>
                 <legend>Tamaño:</legend>
-                
+
                 <div class="btns_size_container">
+                  <input id="size_a4" type="radio" name="size" />
+                  <label for="size_a4" class="btn_secondary">
+                    A4: 210 x 297mm</label
+                  >
 
-                  <input id="size_a4" type="radio" name="size" >
-                  <label for="size_a4" class="btn_secondary"> A4: 210 x 297mm</label>
+                  <input id="size_a3" type="radio" name="size" />
+                  <label for="size_a3" class="btn_secondary">
+                    A3: 297 x 420mm</label
+                  >
 
-                  <input id="size_a3" type="radio" name="size" >
-                  <label for="size_a3" class="btn_secondary"> A3: 297 x 420mm</label>
-
-                  <input id="size_a5" type="radio" name="size" >
-                  <label for="size_a5" class="btn_secondary"> A5: 148 x 210mm</label>
-
+                  <input id="size_a5" type="radio" name="size" />
+                  <label for="size_a5" class="btn_secondary">
+                    A5: 148 x 210mm</label
+                  >
                 </div>
               </fieldeset>
-            
             </form>
 
             <!-- descripción -->
-              <p class="product_sheet_description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            
+            <p class="product_sheet_description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
 
             <!-- CTA -->
-            <section class="cta_container">
+            <div class="cta_container">
               <!-- seleccionar cantidad -->
               <div class="quantity_selector">
                 <button class="btn_cart_minus">
@@ -206,7 +207,7 @@
                   />
                 </button>
               </div>
-            </section>
+            </div>
 
             <!-- añadir al carrito -->
             <button class="btn_add_to_cart" type="submit">
@@ -227,7 +228,7 @@
             </aside>
 
             <!-- compartir ficha de producto -->
-            <section class="product_sheet_share">
+            <div class="product_sheet_share">
               <button class="btn_share">
                 <img
                   src="https://i.postimg.cc/7P3zB0w2/icon-share.png"
@@ -236,12 +237,177 @@
                 />
               </button>
               <p>Compartir</p>
-            </section>
-
-          </section>
-
+            </div>
+          </div>
         </article>
+      </section>
 
+      <!-- PRODUCTOS SUGERIDOS -->
+      <section class="suggested_products_section dotted_border_olive">
+        <h2>Podría gustarte también...</h2>
+
+        <!-- Fila con las 4 cards -->
+        <div class="suggested_products_cards_container">
+          <!-- CARD 1 REVISADA -->
+          <article class="suggested_products_card">
+            <!-- imagen CARD 1  -->
+            <img
+              src="http://a517.masterux.net/imagenes/productos/lamina-se-la-energia-que-quieres-atraer-juana-bloss.jpg"
+              alt="Lamina Se la energia que quieres atraer de Juana Bloss"
+              class="suggested_products_img"
+            />
+
+            <!-- texto CARD 1 -->
+            <div class="suggested_products_text_container">
+              <h3 class="suggested_products_title">
+                <span class="suggested_products_artist_name">Juana Bloss </span>
+                Se la energía que quieres atraer
+              </h3>
+              <div class="suggested_products_price_buttons_container">
+                <p class="price">
+                  36 €<span class="taxes">Impuestos incl.</span>
+                </p>
+
+                <div class="suggested_products_buttons_container">
+                  <button class="btn_heart">
+                    <img
+                      class="btn_icon"
+                      src="https://i.postimg.cc/SKh8S602/icon-heart-outline.png"
+                      alt="icono de favoritos"
+                    />
+                  </button>
+                  <button class="btn_icon_add_to_cart">
+                    <img
+                      class="btn_icon"
+                      src="https://i.postimg.cc/1zDr6H7v/icon-button-shop-white.png"
+                      alt="icono del carrito"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2 REVISADA -->
+          <article class="suggested_products_card">
+            <!-- imagen CARD 2 -->
+            <img
+              src="http://a517.masterux.net/imagenes/productos/lamina-estallido-de-primaver-paula-lopez.jpg"
+              alt="lámina Estallido de primavera de Paula López"
+              class="suggested_products_img"
+            />
+
+            <!-- texto CARD 2 -->
+            <div class="suggested_products_text_container">
+              <h3 class="suggested_products_title">
+                <span class="suggested_products_artist_name">Paula López</span
+                >Estallido de Primavera
+              </h3>
+              <div class="suggested_products_price_buttons_container">
+                <p class="price">
+                  42 €<span class="taxes">Impuestos incl.</span>
+                </p>
+
+                <div class="suggested_products_buttons_container">
+                  <button class="btn_heart">
+                    <img
+                      class="btn_icon"
+                      src="https://i.postimg.cc/SKh8S602/icon-heart-outline.png"
+                      alt="icono de favoritos"
+                    />
+                  </button>
+                  <button class="btn_icon_add_to_cart">
+                    <img
+                      class="btn_icon"
+                      src="https://i.postimg.cc/1zDr6H7v/icon-button-shop-white.png"
+                      alt="icono del carrito"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3 REVISADA -->
+          <article class="suggested_products_card">
+            <!-- imagen CARD 3 -->
+            <img
+              src="http://a517.masterux.net/imagenes/productos/lamina-sardinas-dentro-de-la-lata-asier-dunk.jpg"
+              alt="lámina Sardinas dentro de una lata de Asier Dunk"
+              class="suggested_products_img"
+            />
+
+            <!-- texto CARD 3 -->
+            <div class="suggested_products_text_container">
+              <h3 class="suggested_products_title">
+                <span class="suggested_products_artist_name">Asier Dunk</span
+                >Sardinas dentro de la lata
+              </h3>
+              <div class="suggested_products_price_buttons_container">
+                <p class="price">
+                  30 €<span class="taxes">Impuestos incl.</span>
+                </p>
+
+                <div class="suggested_products_buttons_container">
+                  <button class="btn_heart">
+                    <img
+                      class="btn_icon"
+                      src="https://i.postimg.cc/SKh8S602/icon-heart-outline.png"
+                      alt="icono de favoritos"
+                    />
+                  </button>
+                  <button class="btn_icon_add_to_cart">
+                    <img
+                      class="btn_icon"
+                      src="https://i.postimg.cc/1zDr6H7v/icon-button-shop-white.png"
+                      alt="icono del carrito"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4 REVISADA -->
+          <article class="suggested_products_card">
+            <!-- imagen CARD 4 -->
+            <img
+              src="http://a517.masterux.net/imagenes/productos/lamina-el-mejor-momento-vermut-ana-de-lima.jpg"
+              alt="lámina El mejor momento, VERMUT de Sienna Junner"
+              class="suggested_products_img"
+            />
+
+            <!-- texto CARD 4 -->
+            <div class="suggested_products_text_container">
+              <h3 class="suggested_products_title">
+                <span class="suggested_products_artist_name">Sienna Junner</span
+                >El mejor momento, VERMUT
+              </h3>
+              <div class="suggested_products_price_buttons_container">
+                <p class="price">
+                  28 €<span class="taxes">Impuestos incl.</span>
+                </p>
+
+                <div class="suggested_products_buttons_container">
+                  <button class="btn_heart">
+                    <img
+                      class="btn_icon"
+                      src="https://i.postimg.cc/SKh8S602/icon-heart-outline.png"
+                      alt="icono de favoritos"
+                    />
+                  </button>
+                  <button class="btn_icon_add_to_cart">
+                    <img
+                      class="btn_icon"
+                      src="https://i.postimg.cc/1zDr6H7v/icon-button-shop-white.png"
+                      alt="icono del carrito"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
   </body>
