@@ -98,8 +98,151 @@
     </header>
 
     <main>
-   
+      <!-- FICHA DE PRODUCTO -->
+      <section class="product_sheet">
+        <!-- BREADCRUMBS -->
+        <nav class="breadcrumbs">
+          <ul>
+            <li>
+              <a href="#">Inicio</a>
+            </li>
 
+            <li>
+              <a href="#">Láminas</a>
+            </li>
+
+            <li>
+              <a href="#">Eynon Jones</a>
+            </li>
+
+            <li>
+              <a href="#">Edición Limitada</a>
+            </li>
+          </ul>
+        </nav>
+
+        <article class="product_sheet_container">
+          <!-- imagen -->
+          <div class="product_sheet_image">
+            <img
+              src="http://a517.masterux.net/imagenes/productos/lamina-summer-vibes-eynon-jones.png"
+              alt="lámina Summer Vibes de  Eynon Jones de edición limitada"
+            />
+          </div>
+
+          <!-- información + CTA  -->
+          <section class="product_sheet_content">
+            <!-- header -->
+            <button class="btn_heart">
+              <img
+                class="btn_icon"
+                src="https://i.postimg.cc/WbF3XxQC/icon-heart-outline.png"
+                alt="icono de favoritos"
+              />
+            </button>
+
+            <header class="product_sheet_header">
+              <h1>
+                <span class="underlined">EDICIÓN LIMITADA</span>
+                <span class="product_sheet_artist_name">Eynon Jones</span>
+                Summer Vibes
+              </h1>
+            </header>
+
+            <!-- precio -->
+            <div class="product_sheet_price">
+              <p class="price">
+                110 € <span class="taxes">Impuestos incluidos</span>
+              </p>
+            </div>
+
+            <!-- medidas disponibles -->
+            <form class="product_sheet_size">
+
+              <fieldeset>
+                <legend>Tamaño:</legend>
+                
+                <div class="btns_size_container">
+
+                  <input id="size_a4" type="radio" name="size" >
+                  <label for="size_a4" class="btn_secondary"> A4: 210 x 297mm</label>
+
+                  <input id="size_a3" type="radio" name="size" >
+                  <label for="size_a3" class="btn_secondary"> A3: 297 x 420mm</label>
+
+                  <input id="size_a5" type="radio" name="size" >
+                  <label for="size_a5" class="btn_secondary"> A5: 148 x 210mm</label>
+
+                </div>
+              </fieldeset>
+            
+            </form>
+
+            <!-- descripción -->
+              <p class="product_sheet_description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            
+
+            <!-- CTA -->
+            <section class="cta_container">
+              <!-- seleccionar cantidad -->
+              <div class="quantity_selector">
+                <button class="btn_cart_minus">
+                  <img
+                    src="https://i.postimg.cc/d1qzCGBP/icon-button-cart-Minus-Circle.png"
+                    alt="icono de quitar 1 artículo del carrito"
+                  />
+                </button>
+                <span>1</span>
+                <button>
+                  <img
+                    class="btn_cart_plus"
+                    src="https://i.postimg.cc/1Xyws3sw/icon-button-cart-Plus-Circle.png"
+                    alt="icono de sumar 1 artículo del carrito"
+                  />
+                </button>
+              </div>
+            </section>
+
+            <!-- añadir al carrito -->
+            <button class="btn_add_to_cart" type="submit">
+              Añadir al carrito
+              <img
+                class="btn_icon"
+                src="https://i.postimg.cc/1zDr6H7v/icon-button-shop-white.png"
+                alt="icono del carrito"
+              />
+            </button>
+
+            <!-- info sobre envíos -->
+            <aside class="product_sheet_additional_info">
+              <ul>
+                <li>Envío gratuito a Península desde 39€</li>
+                <li>Recogida gratuita en tienda (Barcelona)</li>
+              </ul>
+            </aside>
+
+            <!-- compartir ficha de producto -->
+            <section class="product_sheet_share">
+              <button class="btn_share">
+                <img
+                  src="https://i.postimg.cc/7P3zB0w2/icon-share.png"
+                  alt="icono de compartir ficha de producto"
+                  class="btn_icon"
+                />
+              </button>
+              <p>Compartir</p>
+            </section>
+
+          </section>
+
+        </article>
+
+      </section>
     </main>
   </body>
 </html>
