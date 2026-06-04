@@ -998,11 +998,6 @@ input[type="radio"] {
   font-size: 1rem;
 }
 
-.btn_cart_plus,
-.btn_cart_minus {
-  width: 2.5rem; /* 40px */
-  height: 2.5rem; /* 40px */
-}
 
 /* BOTÓN CARRITO */
 .btn_add_to_cart {
