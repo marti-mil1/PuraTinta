@@ -33,8 +33,13 @@
 
 body {
   min-width: 320px;
-  padding-inline: clamp(1rem, 3vw, 4rem); /*padding laterales */
+  
   background-color: var(--white);
+}
+ 
+.header,
+main {
+  padding-inline: clamp(1rem, 3vw, 4rem); /*padding laterales */
 }
 
 img {
@@ -90,6 +95,10 @@ a {
   font-family: var(--font-body);
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* UNDERLINED */
 .underlined {
   text-decoration: underline;
@@ -101,7 +110,8 @@ a {
 }
 
 /* ============== LOGO ============== */
-.logo {
+.logo,
+.logo_footer {
   width: 176px;
   height: auto;
 
@@ -742,7 +752,7 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  min-height: 8.5rem;
+  height: 8rem;
   background-color: hsla(0, 0%, 100%, 0.4);
   padding: 0.5rem;
 
@@ -760,6 +770,10 @@ a {
 /* PANTALLAS min 766px */
 @media screen and (min-width: 766px) {
   /* COLLECTIONS SECTION */
+  .collection_info {
+    height: 9rem;
+  }
+
   .collection_info > .btn_primary {
     align-self: center;
   }
@@ -793,7 +807,6 @@ a {
   font-size: 1rem; /* 16px */
   line-height: 1.5rem; /* 24px  */
   font-weight: var(--font-bold);
-  text-transform: uppercase;
 }
 
 .delivery_card img {
@@ -1043,6 +1056,12 @@ input[type="radio"] {
 
 .product_sheet_share:hover {
   text-decoration: underline;
+  cursor: pointer;
+}
+
+/* EXTRA INFO */
+.product_sheet_additional_info ul {
+  padding-left: 1rem;
 }
 
 /* ================= PRODUCTOS SUGERIDOS =============== */
@@ -1057,7 +1076,8 @@ input[type="radio"] {
 .suggested_products_cards_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
+  row-gap: 2rem;
   margin-block-start: 1.5rem;
 }
 
@@ -1161,7 +1181,128 @@ input[type="radio"] {
   }
 }
 
-/* EXTRA INFO */
-.product_sheet_additional_info ul {
-  padding-left: 1rem;
+
+
+/* ===================== FOOTER ==================== */
+
+.footer :is(h2) {
+  font-family: var(--font-body);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.5rem; /* 24px  */
+  font-weight: var(--font-bold);
+}
+
+.footer {
+  padding-inline: clamp(1rem, 3vw, 4rem); /*padding laterales */
+  background-color: var(--sand);
+  border-radius: 50px 50px 0 0;
+  margin-block-start: 2rem;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.footer_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer :is(ul) {
+  list-style: none;
+  margin-block-start: 0.5rem;
+}
+
+.footer :is(li) {
+  font-family: var(--font-body);
+  font-size: 1rem; /* 16px */
+  line-height: 1.25rem; /* 20px  */
+  font-weight: var(--font-normal); 
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.footer :is(a) {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.footer :is(a):hover {
+  color: var(--blue);
+  
+}
+
+.footer :is(a):active {
+  font-weight: var(--font-semi-bold);
+}
+
+.footer_img:hover{
+  transform: scale(1.1);
+  transition-duration: 200ms;
+}
+
+
+.footer_icons_container {
+  margin: 0.5rem 0 0;
+  display: flex;
+  width: max-content;
+  height: auto;
+  gap: 1rem;
+}
+
+.copyright {
+  font-family: var(--font-body);
+  font-size: 0.75rem; /* 12px */
+  line-height: 0.875rem;
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+}
+
+
+/* PANTALLAS min 766px */
+@media screen and (min-width: 766px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    align-items: start;
+    column-gap: 1.5rem;
+    grid-template-areas:
+    "logo info legal atencionAlCliente"
+    ".    .    .     copyright";
+  }
+
+  .footer_section {
+    align-items: start;
+  }
+
+  .footer :is(li) {
+    text-align: start;
+  }
+
+  .logo_footer {
+    grid-area: logo;
+    margin: 0 1rem 0 0;
+  }
+
+  .footer > section:nth-of-type(1) {
+    grid-area: info;
+  }
+
+  footer > section:nth-of-type(2) {
+    grid-area: legal;
+  }
+
+   footer > section:nth-of-type(3) {
+    grid-area: atencionAlCliente;
+  }
+
+  .copyright {
+    grid-area: copyright;
+    text-align: start;
+  }
 }
