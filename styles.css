@@ -33,10 +33,10 @@
 
 body {
   min-width: 320px;
-  
+
   background-color: var(--white);
 }
- 
+
 .header,
 main {
   padding-inline: clamp(1rem, 3vw, 4rem); /*padding laterales */
@@ -871,6 +871,11 @@ a {
   display: block;
 }
 
+.product_sheet_image img:hover {
+  transform: scale(1.01);
+  transition-duration: 200ms;
+}
+
 .product_sheet_content {
   position: relative;
   display: flex;
@@ -998,6 +1003,12 @@ input[type="radio"] {
   font-size: 1rem;
 }
 
+/* BOTÓN CARRITO */
+.btn_cart_minus:hover,
+.btn_cart_plus:hover {
+  transform: scale(1.05);
+  transition-duration: 200ms;
+}
 
 /* BOTÓN CARRITO */
 .btn_add_to_cart {
@@ -1040,16 +1051,17 @@ input[type="radio"] {
   gap: 0.5rem;
 }
 
+.product_sheet_share:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
 .btn_share {
   width: 2rem; /* 32px */
   height: 2rem; /* 32px */
   border: none;
   background-color: transparent;
-}
-
-.product_sheet_share:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 /* EXTRA INFO */
@@ -1091,8 +1103,6 @@ input[type="radio"] {
   aspect-ratio: 176/250;
   object-fit: cover;
 }
-
-
 
 .suggested_products_text_container {
   display: flex;
@@ -1181,8 +1191,6 @@ input[type="radio"] {
   }
 }
 
-
-
 /* ===================== FOOTER ==================== */
 
 .footer {
@@ -1222,7 +1230,7 @@ input[type="radio"] {
   font-family: var(--font-body);
   font-size: 1rem; /* 16px */
   line-height: 1.25rem; /* 20px  */
-  font-weight: var(--font-normal); 
+  font-weight: var(--font-normal);
   text-align: center;
   margin: 0.5rem 0;
 }
@@ -1234,18 +1242,16 @@ input[type="radio"] {
 
 .footer :is(a):hover {
   color: var(--blue);
-  
 }
 
 .footer :is(a):active {
   font-weight: var(--font-semi-bold);
 }
 
-.footer_img:hover{
+.footer_img:hover {
   transform: scale(1.1);
   transition-duration: 200ms;
 }
-
 
 .footer_icons_container {
   margin: 0.5rem 0 0;
@@ -1263,7 +1269,6 @@ input[type="radio"] {
   text-align: center;
 }
 
-
 /* PANTALLAS min 766px */
 @media screen and (min-width: 766px) {
   .footer {
@@ -1273,8 +1278,8 @@ input[type="radio"] {
     align-items: start;
     column-gap: 1.5rem;
     grid-template-areas:
-    "logo info legal atencionAlCliente"
-    ".    .    .     copyright";
+      "logo info legal atencionAlCliente"
+      ".    .    .     copyright";
   }
 
   .footer_section {
@@ -1298,7 +1303,7 @@ input[type="radio"] {
     grid-area: legal;
   }
 
-   footer > section:nth-of-type(3) {
+  footer > section:nth-of-type(3) {
     grid-area: atencionAlCliente;
   }
 
